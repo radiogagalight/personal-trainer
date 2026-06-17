@@ -1,0 +1,13 @@
+{
+  "name": "personal-trainer",
+  "private": true,
+  "description": "Showup workout PWA — run scripts from the repo root.",
+  "scripts": {
+    "dev": "npm run dev --prefix showup",
+    "build": "npm run build --prefix showup",
+    "preview": "npm run preview --prefix showup",
+    "test": "npm run test --prefix showup",
+    "typecheck": "npm run typecheck --prefix showup",
+    "install:app": "npm install --prefix showup"
+  }
+}

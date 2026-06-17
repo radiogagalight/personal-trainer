@@ -1,0 +1,713 @@
+{
+  "schemaVersion": 1,
+  "description": "Seed exercise library for the Personal Trainer PWA. All exercises restricted to home equipment: bodyweight/mat, dumbbells/kettlebells, resistance bands, TRX. Import into IndexedDB on first run. All exercises are user-editable and deletable (isCustom: false).",
+  "equipmentLegend": ["none", "dumbbells", "kettlebells", "bands", "trx", "mat"],
+  "typeLegend": ["strength", "cardio", "mobility", "yoga", "warmup", "cooldown"],
+  "bodyAreaLegend": ["upper-push", "upper-pull", "lower", "core", "full-body", "cardio", "mobility"],
+  "exercises": [
+
+    {
+      "name": "Dumbbell Floor Press",
+      "type": "strength",
+      "targetAreas": ["upper-push"],
+      "equipment": ["dumbbells", "mat"],
+      "instructions": "Lie on your back on the mat, knees bent, a dumbbell in each hand at chest level. Press both dumbbells straight up until arms are extended, then lower with control until your upper arms lightly touch the floor. Keep your wrists stacked over your elbows throughout.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps", "weight"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "Standing Dumbbell Shoulder Press",
+      "type": "strength",
+      "targetAreas": ["upper-push"],
+      "equipment": ["dumbbells"],
+      "instructions": "Stand tall with a dumbbell in each hand at shoulder height, palms facing forward. Brace your core and press the dumbbells overhead until arms are fully extended. Lower slowly back to shoulder height. Avoid arching your lower back.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps", "weight"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "Push-Up",
+      "type": "strength",
+      "targetAreas": ["upper-push", "core"],
+      "equipment": ["none"],
+      "instructions": "Start in a high plank with hands slightly wider than shoulders. Keep your body in a straight line from head to heels. Lower your chest toward the floor by bending your elbows, then press back up. Drop to your knees to scale the movement.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "TRX Chest Press",
+      "type": "strength",
+      "targetAreas": ["upper-push", "core"],
+      "equipment": ["trx"],
+      "instructions": "Face away from the anchor, holding the TRX handles at chest height with arms extended. Lean forward into the straps, lower your chest between the handles by bending your elbows, then press back to the start. Walk your feet back to increase difficulty.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "Resistance Band Chest Fly",
+      "type": "strength",
+      "targetAreas": ["upper-push"],
+      "equipment": ["bands"],
+      "instructions": "Anchor the band behind you at chest height and hold an end in each hand, arms out to the sides with a slight bend. Bring your hands together in front of your chest in a wide arc, squeezing your chest, then return with control.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Dumbbell Overhead Triceps Extension",
+      "type": "strength",
+      "targetAreas": ["upper-push"],
+      "equipment": ["dumbbells"],
+      "instructions": "Hold a single dumbbell with both hands overhead, arms extended. Keeping your elbows pointing forward and close to your head, lower the dumbbell behind your head by bending your elbows, then extend back up.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps", "weight"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+
+    {
+      "name": "Dumbbell Bent-Over Row",
+      "type": "strength",
+      "targetAreas": ["upper-pull"],
+      "equipment": ["dumbbells"],
+      "instructions": "Hinge forward at the hips with a flat back, a dumbbell in each hand hanging below your shoulders. Pull both dumbbells toward your ribcage, squeezing your shoulder blades together, then lower with control.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps", "weight"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "TRX Row",
+      "type": "strength",
+      "targetAreas": ["upper-pull", "core"],
+      "equipment": ["trx"],
+      "instructions": "Hold the TRX handles and lean back with arms extended, body straight and heels on the floor. Pull your chest toward your hands by driving your elbows back, squeezing your shoulder blades, then lower with control. Walk your feet forward to make it harder.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "Resistance Band Pull-Apart",
+      "type": "strength",
+      "targetAreas": ["upper-pull"],
+      "equipment": ["bands"],
+      "instructions": "Hold a band in front of you at shoulder height with both hands, arms extended. Keeping arms straight, pull the band apart by squeezing your shoulder blades together until the band touches your chest, then return slowly.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 35,
+      "isCustom": false
+    },
+    {
+      "name": "Single-Arm Dumbbell Row",
+      "type": "strength",
+      "targetAreas": ["upper-pull", "core"],
+      "equipment": ["dumbbells"],
+      "instructions": "Place one hand and the same-side knee on a sturdy surface, other foot on the floor, a dumbbell in your free hand. Keep your back flat and pull the dumbbell toward your hip, then lower with control. Complete all reps, then switch sides.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps", "weight"],
+      "estimatedSecondsPerSet": 50,
+      "isCustom": false
+    },
+    {
+      "name": "Dumbbell Biceps Curl",
+      "type": "strength",
+      "targetAreas": ["upper-pull"],
+      "equipment": ["dumbbells"],
+      "instructions": "Stand tall with a dumbbell in each hand, arms at your sides, palms facing forward. Curl the dumbbells toward your shoulders by bending your elbows, keeping your upper arms still, then lower slowly.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps", "weight"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "TRX Biceps Curl",
+      "type": "strength",
+      "targetAreas": ["upper-pull"],
+      "equipment": ["trx"],
+      "instructions": "Face the anchor, holding the handles with palms up and arms extended, leaning back. Curl your body toward your hands by bending your elbows, keeping upper arms fixed, then lower with control.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+
+    {
+      "name": "Goblet Squat",
+      "type": "strength",
+      "targetAreas": ["lower"],
+      "equipment": ["dumbbells", "kettlebells"],
+      "instructions": "Hold a single dumbbell or kettlebell against your chest with both hands. Stand with feet shoulder-width apart and squat down by pushing your hips back and bending your knees, keeping your chest up. Drive through your heels to stand.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps", "weight"],
+      "estimatedSecondsPerSet": 50,
+      "isCustom": false
+    },
+    {
+      "name": "Bodyweight Squat",
+      "type": "strength",
+      "targetAreas": ["lower"],
+      "equipment": ["none"],
+      "instructions": "Stand with feet shoulder-width apart, arms extended in front for balance. Push your hips back and bend your knees to lower until your thighs are roughly parallel to the floor, then drive through your heels to stand tall.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Dumbbell Reverse Lunge",
+      "type": "strength",
+      "targetAreas": ["lower"],
+      "equipment": ["dumbbells"],
+      "instructions": "Stand tall with a dumbbell in each hand. Step one foot back and lower until both knees are bent about 90 degrees, then push through your front heel to return. Alternate legs each rep.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps", "weight"],
+      "estimatedSecondsPerSet": 55,
+      "isCustom": false
+    },
+    {
+      "name": "Kettlebell Deadlift",
+      "type": "strength",
+      "targetAreas": ["lower", "upper-pull"],
+      "equipment": ["kettlebells"],
+      "instructions": "Stand over a kettlebell with feet hip-width apart. Hinge at the hips with a flat back, grip the handle, and stand up tall by driving your hips forward. Lower the kettlebell back down with control by hinging again.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps", "weight"],
+      "estimatedSecondsPerSet": 50,
+      "isCustom": false
+    },
+    {
+      "name": "Glute Bridge",
+      "type": "strength",
+      "targetAreas": ["lower", "core"],
+      "equipment": ["mat"],
+      "instructions": "Lie on your back with knees bent and feet flat on the floor. Drive through your heels to lift your hips until your body forms a straight line from knees to shoulders, squeezing your glutes at the top, then lower slowly.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Resistance Band Lateral Walk",
+      "type": "strength",
+      "targetAreas": ["lower"],
+      "equipment": ["bands"],
+      "instructions": "Place a loop band around your legs just above the knees. Drop into a quarter squat and step sideways, keeping tension on the band, for the set distance or rep count, then return the other direction.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "Bulgarian Split Squat",
+      "type": "strength",
+      "targetAreas": ["lower"],
+      "equipment": ["dumbbells"],
+      "instructions": "Stand a couple of feet in front of a sturdy chair or bench, one foot resting on it behind you. Hold dumbbells at your sides and lower straight down until your front thigh is parallel to the floor, then drive back up. Switch legs after completing the set.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps", "weight"],
+      "estimatedSecondsPerSet": 55,
+      "isCustom": false
+    },
+    {
+      "name": "Calf Raise",
+      "type": "strength",
+      "targetAreas": ["lower"],
+      "equipment": ["none"],
+      "instructions": "Stand tall with feet hip-width apart. Rise onto the balls of your feet as high as you can, pause briefly at the top, then lower your heels slowly. Hold dumbbells to add resistance.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 35,
+      "isCustom": false
+    },
+
+    {
+      "name": "Plank",
+      "type": "strength",
+      "targetAreas": ["core"],
+      "equipment": ["mat"],
+      "instructions": "Rest on your forearms and toes with your body in a straight line from head to heels. Brace your core and squeeze your glutes, holding the position without letting your hips sag or pike. Breathe steadily throughout.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "Dead Bug",
+      "type": "strength",
+      "targetAreas": ["core"],
+      "equipment": ["mat"],
+      "instructions": "Lie on your back with arms reaching toward the ceiling and knees bent at 90 degrees over your hips. Slowly lower your opposite arm and leg toward the floor, keeping your lower back pressed down, then return and switch sides.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "Bicycle Crunch",
+      "type": "strength",
+      "targetAreas": ["core"],
+      "equipment": ["mat"],
+      "instructions": "Lie on your back, hands behind your head, knees lifted. Bring one elbow toward the opposite knee while extending the other leg, then switch sides in a smooth pedaling motion. Move with control rather than speed.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Russian Twist",
+      "type": "strength",
+      "targetAreas": ["core"],
+      "equipment": ["mat", "dumbbells"],
+      "instructions": "Sit on the mat with knees bent and lean back slightly, holding a dumbbell at your chest. Rotate your torso to tap the weight beside one hip, then the other, keeping your core engaged. Lift your feet to increase difficulty.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Side Plank",
+      "type": "strength",
+      "targetAreas": ["core"],
+      "equipment": ["mat"],
+      "instructions": "Lie on your side, propped on one forearm with feet stacked. Lift your hips so your body forms a straight line, hold, then switch sides. Drop your bottom knee to the floor to scale it.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "TRX Plank",
+      "type": "strength",
+      "targetAreas": ["core"],
+      "equipment": ["trx"],
+      "instructions": "Place both feet in the TRX foot cradles and set up in a forearm plank with the straps supporting your feet. Brace hard to keep your body straight and stable against the strap's movement. Hold for the set duration.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+
+    {
+      "name": "Kettlebell Swing",
+      "type": "strength",
+      "targetAreas": ["full-body", "lower"],
+      "equipment": ["kettlebells"],
+      "instructions": "Stand with feet shoulder-width apart, kettlebell on the floor in front of you. Hinge at the hips to grip it, then drive your hips forward explosively to swing the kettlebell up to chest height. Let it swing back between your legs and repeat. Power comes from the hips, not the arms.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps", "weight"],
+      "estimatedSecondsPerSet": 50,
+      "isCustom": false
+    },
+    {
+      "name": "Dumbbell Thruster",
+      "type": "strength",
+      "targetAreas": ["full-body"],
+      "equipment": ["dumbbells"],
+      "instructions": "Hold dumbbells at shoulder height and squat down. As you stand back up, drive the dumbbells overhead in one fluid motion. Lower them back to your shoulders and repeat.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps", "weight"],
+      "estimatedSecondsPerSet": 55,
+      "isCustom": false
+    },
+    {
+      "name": "Burpee",
+      "type": "strength",
+      "targetAreas": ["full-body"],
+      "equipment": ["none"],
+      "instructions": "From standing, squat down and place your hands on the floor. Jump or step your feet back into a plank, optionally lower your chest, then return your feet to your hands and jump up with arms overhead.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 50,
+      "isCustom": false
+    },
+    {
+      "name": "Bear Crawl",
+      "type": "strength",
+      "targetAreas": ["full-body", "core"],
+      "equipment": ["none"],
+      "instructions": "Start on hands and knees with knees hovering an inch off the floor. Crawl forward by moving opposite hand and foot together, keeping your hips low and back flat. Crawl for the set distance or time.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+
+    {
+      "name": "Jumping Jacks",
+      "type": "cardio",
+      "targetAreas": ["cardio", "full-body"],
+      "equipment": ["none"],
+      "instructions": "Stand with feet together and arms at your sides. Jump your feet out wide while raising your arms overhead, then jump back to the start. Keep a steady, rhythmic pace.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "High Knees",
+      "type": "cardio",
+      "targetAreas": ["cardio"],
+      "equipment": ["none"],
+      "instructions": "Run in place, driving each knee up toward hip height while pumping your arms. Stay light on the balls of your feet and keep your core engaged.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Mountain Climbers",
+      "type": "cardio",
+      "targetAreas": ["cardio", "core"],
+      "equipment": ["mat"],
+      "instructions": "Start in a high plank. Drive one knee toward your chest, then quickly switch legs in a running motion, keeping your hips low and shoulders over your hands.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Skater Hops",
+      "type": "cardio",
+      "targetAreas": ["cardio", "lower"],
+      "equipment": ["none"],
+      "instructions": "Leap sideways from one foot to the other, landing softly with a slight knee bend and letting the trailing leg sweep behind you. Alternate sides in a steady rhythm.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Butt Kicks",
+      "type": "cardio",
+      "targetAreas": ["cardio"],
+      "equipment": ["none"],
+      "instructions": "Jog in place, kicking your heels up toward your glutes with each step while pumping your arms. Stay light on your feet and keep a quick cadence.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Jump Rope (or Mimic)",
+      "type": "cardio",
+      "targetAreas": ["cardio"],
+      "equipment": ["none"],
+      "instructions": "Skip rope with a steady rhythm, or mimic the motion without a rope by hopping lightly on the balls of your feet while circling your wrists. Keep jumps small and controlled.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 60,
+      "isCustom": false
+    },
+    {
+      "name": "Squat Jumps",
+      "type": "cardio",
+      "targetAreas": ["cardio", "lower"],
+      "equipment": ["none"],
+      "instructions": "Lower into a squat, then explode upward into a jump. Land softly back into the squat position and immediately repeat. Use your arms to drive the jump.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "Steady-State Walk or Jog",
+      "type": "cardio",
+      "targetAreas": ["cardio"],
+      "equipment": ["none"],
+      "instructions": "Walk briskly or jog at a comfortable, sustainable pace where you can still hold a conversation. Use this as your main cardio block; track duration and distance.",
+      "videoUrl": "",
+      "defaultMetrics": ["duration", "distance"],
+      "estimatedSecondsPerSet": 1200,
+      "isCustom": false
+    },
+    {
+      "name": "Shadow Boxing",
+      "type": "cardio",
+      "targetAreas": ["cardio", "full-body"],
+      "equipment": ["none"],
+      "instructions": "Adopt a light boxing stance and throw a steady mix of jabs, crosses, and hooks while bouncing on your feet. Keep your core engaged and move around your space.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 60,
+      "isCustom": false
+    },
+
+    {
+      "name": "Cat-Cow",
+      "type": "mobility",
+      "targetAreas": ["mobility"],
+      "equipment": ["mat"],
+      "instructions": "On hands and knees, slowly arch your back and lift your head and tailbone (cow), then round your spine and tuck your chin (cat). Move smoothly with your breath.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "World's Greatest Stretch",
+      "type": "mobility",
+      "targetAreas": ["mobility"],
+      "equipment": ["mat"],
+      "instructions": "Step into a deep lunge, place both hands inside your front foot, then rotate your torso and reach the inside arm toward the ceiling. Return and switch sides. A full-body mobility opener.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 50,
+      "isCustom": false
+    },
+    {
+      "name": "Hip Circles",
+      "type": "mobility",
+      "targetAreas": ["mobility"],
+      "equipment": ["none"],
+      "instructions": "Stand on one leg and lift the other knee to hip height. Draw slow, controlled circles with the lifted knee, opening the hip outward, then reverse direction. Switch legs.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Thoracic Rotation",
+      "type": "mobility",
+      "targetAreas": ["mobility"],
+      "equipment": ["mat"],
+      "instructions": "On hands and knees, place one hand behind your head. Rotate that elbow down toward the opposite arm, then open up and rotate it toward the ceiling, following with your eyes. Repeat, then switch sides.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "Band Shoulder Dislocates",
+      "type": "mobility",
+      "targetAreas": ["mobility"],
+      "equipment": ["bands"],
+      "instructions": "Hold a band with a wide grip in front of you. Keeping arms straight, slowly raise the band overhead and behind you, then return. Widen your grip if the range feels tight.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Ankle Rocks",
+      "type": "mobility",
+      "targetAreas": ["mobility"],
+      "equipment": ["none"],
+      "instructions": "In a half-kneeling position, drive your front knee forward over your toes without lifting the heel, then rock back. Repeat to mobilize the ankle, then switch sides.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "reps"],
+      "estimatedSecondsPerSet": 35,
+      "isCustom": false
+    },
+
+    {
+      "name": "Downward Dog",
+      "type": "yoga",
+      "targetAreas": ["mobility", "full-body"],
+      "equipment": ["mat"],
+      "instructions": "From hands and knees, tuck your toes and lift your hips up and back into an inverted V. Press the floor away, lengthen your spine, and let your heels reach toward the ground. Hold and breathe.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Child's Pose",
+      "type": "yoga",
+      "targetAreas": ["mobility"],
+      "equipment": ["mat"],
+      "instructions": "Kneel and sit back onto your heels, then fold forward, extending your arms in front and resting your forehead on the mat. Breathe slowly into your back. A gentle resting pose.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "Warrior II",
+      "type": "yoga",
+      "targetAreas": ["lower", "mobility"],
+      "equipment": ["mat"],
+      "instructions": "Step your feet wide, turn one foot out, and bend that knee over the ankle. Extend your arms parallel to the floor, gaze over the front hand, and sink into the pose. Hold, then switch sides.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "Cobra Pose",
+      "type": "yoga",
+      "targetAreas": ["mobility", "core"],
+      "equipment": ["mat"],
+      "instructions": "Lie face down with hands under your shoulders. Press lightly to lift your chest off the mat, keeping your elbows close and shoulders relaxed away from your ears. Hold and breathe, then lower.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Seated Forward Fold",
+      "type": "yoga",
+      "targetAreas": ["mobility"],
+      "equipment": ["mat"],
+      "instructions": "Sit with legs extended in front of you. Hinge at the hips and reach toward your feet, keeping your spine long rather than rounding hard. Relax into the stretch and breathe.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "Bridge Pose",
+      "type": "yoga",
+      "targetAreas": ["lower", "mobility"],
+      "equipment": ["mat"],
+      "instructions": "Lie on your back with knees bent, feet flat. Lift your hips toward the ceiling and clasp your hands beneath you, rolling your shoulders under. Hold gently and breathe, then lower slowly.",
+      "videoUrl": "",
+      "defaultMetrics": ["sets", "duration"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+
+    {
+      "name": "Arm Circles",
+      "type": "warmup",
+      "targetAreas": ["mobility"],
+      "equipment": ["none"],
+      "instructions": "Stand tall and extend your arms out to the sides. Make small forward circles, gradually growing larger, then reverse. A quick shoulder warm-up.",
+      "videoUrl": "",
+      "defaultMetrics": ["duration"],
+      "estimatedSecondsPerSet": 30,
+      "isCustom": false
+    },
+    {
+      "name": "Leg Swings",
+      "type": "warmup",
+      "targetAreas": ["mobility"],
+      "equipment": ["none"],
+      "instructions": "Hold a wall for balance and swing one leg forward and back in a controlled arc, then side to side. Switch legs. Loosens the hips before training.",
+      "videoUrl": "",
+      "defaultMetrics": ["duration"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Inchworm",
+      "type": "warmup",
+      "targetAreas": ["full-body", "mobility"],
+      "equipment": ["none"],
+      "instructions": "From standing, hinge forward and walk your hands out to a plank, then walk your feet toward your hands. Repeat, moving slowly to warm up the whole body.",
+      "videoUrl": "",
+      "defaultMetrics": ["duration", "reps"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "Marching in Place",
+      "type": "warmup",
+      "targetAreas": ["cardio"],
+      "equipment": ["none"],
+      "instructions": "March in place, lifting your knees and gently swinging your arms. Gradually pick up the pace to raise your heart rate before a workout.",
+      "videoUrl": "",
+      "defaultMetrics": ["duration"],
+      "estimatedSecondsPerSet": 60,
+      "isCustom": false
+    },
+    {
+      "name": "Torso Twists",
+      "type": "warmup",
+      "targetAreas": ["mobility"],
+      "equipment": ["none"],
+      "instructions": "Stand with feet shoulder-width apart and arms relaxed. Rotate your torso gently from side to side, letting your arms swing freely. Keep the motion smooth and controlled.",
+      "videoUrl": "",
+      "defaultMetrics": ["duration"],
+      "estimatedSecondsPerSet": 30,
+      "isCustom": false
+    },
+
+    {
+      "name": "Standing Quad Stretch",
+      "type": "cooldown",
+      "targetAreas": ["mobility"],
+      "equipment": ["none"],
+      "instructions": "Stand on one leg, hold a wall if needed, and pull the other heel toward your glutes, keeping your knees together. Hold the stretch, then switch sides.",
+      "videoUrl": "",
+      "defaultMetrics": ["duration"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Standing Hamstring Stretch",
+      "type": "cooldown",
+      "targetAreas": ["mobility"],
+      "equipment": ["none"],
+      "instructions": "Place one heel slightly in front of you with the leg straight. Hinge at the hips and reach toward that foot, feeling a gentle stretch in the back of the leg. Hold, then switch sides.",
+      "videoUrl": "",
+      "defaultMetrics": ["duration"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Chest Doorway Stretch",
+      "type": "cooldown",
+      "targetAreas": ["mobility"],
+      "equipment": ["none"],
+      "instructions": "Place a forearm on a doorframe with your elbow at shoulder height. Gently step forward to feel a stretch across your chest and front shoulder. Hold, then switch sides.",
+      "videoUrl": "",
+      "defaultMetrics": ["duration"],
+      "estimatedSecondsPerSet": 40,
+      "isCustom": false
+    },
+    {
+      "name": "Figure-Four Stretch",
+      "type": "cooldown",
+      "targetAreas": ["mobility"],
+      "equipment": ["mat"],
+      "instructions": "Lie on your back and cross one ankle over the opposite thigh. Reach through and gently pull the bottom leg toward your chest to stretch the glute and hip. Hold, then switch sides.",
+      "videoUrl": "",
+      "defaultMetrics": ["duration"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "Neck and Shoulder Rolls",
+      "type": "cooldown",
+      "targetAreas": ["mobility"],
+      "equipment": ["none"],
+      "instructions": "Slowly roll your shoulders backward several times, then gently tilt and circle your neck through a comfortable range. Keep all movements slow and easy.",
+      "videoUrl": "",
+      "defaultMetrics": ["duration"],
+      "estimatedSecondsPerSet": 30,
+      "isCustom": false
+    },
+    {
+      "name": "Lying Spinal Twist",
+      "type": "cooldown",
+      "targetAreas": ["mobility"],
+      "equipment": ["mat"],
+      "instructions": "Lie on your back, bring one knee across your body, and let it rest toward the floor while extending the opposite arm out. Turn your gaze away from the knee. Hold and breathe, then switch sides.",
+      "videoUrl": "",
+      "defaultMetrics": ["duration"],
+      "estimatedSecondsPerSet": 45,
+      "isCustom": false
+    },
+    {
+      "name": "Deep Breathing Cooldown",
+      "type": "cooldown",
+      "targetAreas": ["mobility"],
+      "equipment": ["mat"],
+      "instructions": "Lie or sit comfortably. Breathe in slowly through your nose for a count of four, hold briefly, then exhale for a count of six. Repeat to lower your heart rate and close out the session calmly.",
+      "videoUrl": "",
+      "defaultMetrics": ["duration"],
+      "estimatedSecondsPerSet": 60,
+      "isCustom": false
+    }
+
+  ]
+}

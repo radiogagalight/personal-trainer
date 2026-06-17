@@ -1,0 +1,321 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ──────────────────────────────────────────────────────────────
+   Theme tokens — color values are RGB triples so Tailwind can
+   compose them with /<alpha> opacity utilities.
+   ────────────────────────────────────────────────────────────── */
+:root,
+[data-theme='light'] {
+  --color-bg: 246 248 254;
+  --color-surface: 255 255 255;
+  --color-surface-2: 240 244 252;
+  --color-border: 198 208 224;
+  --color-ink: 18 24 42;
+  --color-muted: 92 106 128;
+  /* jewel palette — accent is violet (strength + settings; used sparingly) */
+  --color-accent: 118 52 255;
+  --color-accent-soft: 232 224 255;
+  --color-secondary: 0 220 140;
+  --color-secondary-soft: 178 255 220;
+  --color-tertiary: 0 188 255;
+  --color-tertiary-soft: 186 240 255;
+  --color-ruby: 255 48 108;
+  --color-ruby-soft: 255 220 230;
+  --color-amber: 255 188 0;
+  --color-amber-soft: 255 236 186;
+  --color-fuchsia: 232 58 255;
+  --color-fuchsia-soft: 252 220 255;
+  --color-good: 0 200 120;
+  --color-warn: 255 188 0;
+  /* page chrome (overridden per route via data-page-accent) */
+  --color-page: var(--color-tertiary);
+  --color-page-soft: var(--color-tertiary-soft);
+  --color-ring: var(--color-page);
+  /* chart / data viz */
+  --color-chart-1: 118 52 255;
+  --color-chart-2: 0 188 255;
+  --color-chart-3: 0 220 140;
+  --color-chart-4: 255 188 0;
+  --color-chart-5: 232 58 255;
+}
+
+[data-theme='dark'] {
+  --color-bg: 14 12 26;
+  --color-surface: 32 28 54;
+  --color-surface-2: 48 42 78;
+  --color-border: 72 62 118;
+  --color-ink: 248 250 254;
+  --color-muted: 156 168 192;
+  --color-accent: 186 158 255;
+  --color-accent-soft: 72 38 140;
+  --color-secondary: 52 255 170;
+  --color-secondary-soft: 8 88 62;
+  --color-tertiary: 56 228 255;
+  --color-tertiary-soft: 18 72 98;
+  --color-ruby: 255 108 148;
+  --color-ruby-soft: 120 24 52;
+  --color-amber: 255 210 48;
+  --color-amber-soft: 100 58 12;
+  --color-fuchsia: 248 140 255;
+  --color-fuchsia-soft: 98 28 108;
+  --color-good: 52 255 170;
+  --color-warn: 255 210 48;
+  --color-page: var(--color-tertiary);
+  --color-page-soft: var(--color-tertiary-soft);
+  --color-ring: var(--color-page);
+  --color-chart-1: 186 158 255;
+  --color-chart-2: 56 228 255;
+  --color-chart-3: 52 255 170;
+  --color-chart-4: 255 210 48;
+  --color-chart-5: 248 140 255;
+}
+
+/* Per-route page accent (unique jewel per main area) */
+[data-page-accent='today'] {
+  --color-page: var(--color-tertiary);
+  --color-page-soft: var(--color-tertiary-soft);
+  --color-ring: var(--color-tertiary);
+}
+
+[data-page-accent='plan'] {
+  --color-page: var(--color-amber);
+  --color-page-soft: var(--color-amber-soft);
+  --color-ring: var(--color-amber);
+}
+
+[data-page-accent='workouts'] {
+  --color-page: var(--color-ruby);
+  --color-page-soft: var(--color-ruby-soft);
+  --color-ring: var(--color-ruby);
+}
+
+[data-page-accent='library'] {
+  --color-page: var(--color-fuchsia);
+  --color-page-soft: var(--color-fuchsia-soft);
+  --color-ring: var(--color-fuchsia);
+}
+
+[data-page-accent='progress'] {
+  --color-page: var(--color-secondary);
+  --color-page-soft: var(--color-secondary-soft);
+  --color-ring: var(--color-secondary);
+}
+
+[data-page-accent='settings'],
+[data-page-accent='welcome'] {
+  --color-page: var(--color-accent);
+  --color-page-soft: var(--color-accent-soft);
+  --color-ring: var(--color-accent);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-ink));
+}
+
+body {
+  font-family:
+    Inter,
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    Roboto,
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  text-rendering: optimizeLegibility;
+  overscroll-behavior-y: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+[role='button'] {
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+}
+
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgb(var(--color-muted));
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--color-ring));
+  outline-offset: 2px;
+  border-radius: 8px;
+}
+
+/* Safe-area paddings for iOS */
+.safe-top {
+  padding-top: max(env(safe-area-inset-top), 0px);
+}
+.safe-bottom {
+  padding-bottom: max(env(safe-area-inset-bottom), 0px);
+}
+.safe-x {
+  padding-left: max(env(safe-area-inset-left), 0px);
+  padding-right: max(env(safe-area-inset-right), 0px);
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hide number input spinners */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+/* App-wide subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgb(var(--color-border));
+  border-radius: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* ── Jewel visual system (flat surfaces) ─────────────────────── */
+@layer components {
+  .app-canvas {
+    position: relative;
+    isolation: isolate;
+    background-color: rgb(var(--color-bg));
+  }
+
+  .page-ambient {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(
+        ellipse 130% 75% at 50% -12%,
+        rgb(var(--color-page) / 0.16),
+        transparent 52%
+      ),
+      radial-gradient(
+        ellipse 90% 50% at 100% 100%,
+        rgb(var(--color-page) / 0.07),
+        transparent 45%
+      );
+  }
+
+  [data-theme='dark'] .page-ambient {
+    background:
+      radial-gradient(
+        ellipse 130% 75% at 50% -12%,
+        rgb(var(--color-page) / 0.22),
+        transparent 52%
+      ),
+      radial-gradient(
+        ellipse 90% 50% at 100% 100%,
+        rgb(var(--color-page) / 0.1),
+        transparent 45%
+      );
+  }
+
+  .jewel-stripe {
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      rgb(var(--color-tertiary)) 0%,
+      rgb(var(--color-amber)) 22%,
+      rgb(var(--color-ruby)) 44%,
+      rgb(var(--color-fuchsia)) 66%,
+      rgb(var(--color-secondary)) 88%,
+      rgb(var(--color-accent) / 0.85) 100%
+    );
+  }
+
+  .jewel-stripe-page {
+    height: 3px;
+    background-color: rgb(var(--color-page));
+    box-shadow: 0 1px 10px rgb(var(--color-page) / 0.45);
+  }
+
+  .text-brand {
+    color: rgb(var(--color-page));
+  }
+
+  .card-surface {
+    border: 1px solid rgb(var(--color-border) / 0.65);
+    background-color: rgb(var(--color-surface) / 0.95);
+    box-shadow:
+      0 1px 2px rgb(15 23 42 / 0.04),
+      0 4px 22px rgb(var(--color-page) / 0.1);
+    backdrop-filter: blur(8px);
+  }
+
+  [data-theme='dark'] .card-surface {
+    background-color: rgb(var(--color-surface) / 0.92);
+    box-shadow:
+      0 1px 2px rgb(0 0 0 / 0.2),
+      0 8px 28px rgb(var(--color-page) / 0.14);
+  }
+
+  .btn-primary-solid {
+    background-color: rgb(var(--color-page));
+    box-shadow: 0 2px 14px rgb(var(--color-page) / 0.42);
+  }
+
+  .btn-primary-solid:hover {
+    filter: brightness(1.08);
+  }
+
+  .btn-secondary-solid {
+    background-color: rgb(var(--color-secondary));
+    box-shadow: 0 4px 20px rgb(var(--color-secondary) / 0.42);
+  }
+
+  .chip-active-solid {
+    background-color: rgb(var(--color-page));
+    box-shadow: 0 2px 12px rgb(var(--color-page) / 0.38);
+  }
+
+  .empty-state-jewel {
+    border: 1px dashed rgb(var(--color-page) / 0.45);
+    background-color: rgb(var(--color-page-soft) / 0.55);
+  }
+
+  .icon-halo {
+    background-color: rgb(var(--color-page-soft));
+    box-shadow: 0 2px 14px rgb(var(--color-page) / 0.28);
+    color: rgb(var(--color-page));
+  }
+}
+

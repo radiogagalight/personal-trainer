@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "showup-dev",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["--prefix", "showup", "run", "dev"],
+      "port": 4000
+    }
+  ]
+}
