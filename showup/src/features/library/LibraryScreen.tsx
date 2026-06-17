@@ -154,7 +154,7 @@ export function LibraryScreen() {
                     active={equipment.includes(e)}
                     onClick={() => toggle(equipment, setEquipment, e)}
                   >
-                    {equipmentLabel[e]}
+                    {equipmentLabel(e)}
                   </Chip>
                 ))}
               </FilterGroup>
@@ -238,7 +238,7 @@ export function LibraryScreen() {
                               )}
                               {e.equipment.slice(0, 2).map((eq) => (
                                 <StaticChip key={eq}>
-                                  {equipmentLabel[eq]}
+                                  {equipmentLabel(eq)}
                                 </StaticChip>
                               ))}
                               {e.isCustom && (

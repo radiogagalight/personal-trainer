@@ -227,7 +227,7 @@ export function ExerciseEditorScreen({ mode }: Props) {
                           })
                         }
                       >
-                        {equipmentLabel[e]}
+                        {equipmentLabel(e)}
                       </Chip>
                     ))}
                   </div>

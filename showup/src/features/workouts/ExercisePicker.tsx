@@ -97,7 +97,7 @@ export function ExercisePicker({
                           </StaticChip>
                           {e.equipment.slice(0, 2).map((eq) => (
                             <StaticChip key={eq}>
-                              {equipmentLabel[eq]}
+                              {equipmentLabel(eq)}
                             </StaticChip>
                           ))}
                         </div>

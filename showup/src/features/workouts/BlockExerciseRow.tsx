@@ -62,7 +62,7 @@ export function BlockExerciseRow({
                 {missing.length > 0 && (
                   <p className="mt-0.5 text-xs text-amber">
                     {strings.builder.equipmentMissing(
-                      missing.map((m) => equipmentLabel[m]).join(', '),
+                      missing.map((m) => equipmentLabel(m)).join(', '),
                     )}
                   </p>
                 )}

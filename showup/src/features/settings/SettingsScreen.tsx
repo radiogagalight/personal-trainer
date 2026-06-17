@@ -3,6 +3,7 @@ import { strings } from '@/copy/strings';
 import {
   ALL_EQUIPMENT,
   equipmentLabel,
+  isBuiltInEquipment,
 } from '@/lib/format';
 import { useSettingsStore } from '@/state/settingsStore';
 import { useThemeStore } from '@/state/themeStore';
@@ -41,6 +42,7 @@ export function SettingsScreen() {
   const [pendingImport, setPendingImport] = useState<string | null>(null);
   const [confirmReset, setConfirmReset] = useState(false);
   const [importing, setImporting] = useState(false);
+  const [newEquipment, setNewEquipment] = useState('');
 
   if (!settings) {
     return (
@@ -58,6 +60,35 @@ export function SettingsScreen() {
       ? settings.ownedEquipment.filter((x) => x !== e)
       : [...settings.ownedEquipment, e];
     void update({ ownedEquipment: next });
+  };
+
+  // Custom equipment the user has added (anything that isn't a built-in kind).
+  const customEquipment = settings.ownedEquipment.filter(
+    (e) => !isBuiltInEquipment(e),
+  );
+
+  const addCustomEquipment = () => {
+    const name = newEquipment.trim();
+    if (!name) return;
+    const norm = name.toLowerCase();
+    // Typing the name of a built-in kind just enables that built-in chip.
+    const builtin = ALL_EQUIPMENT.find(
+      (e) => e === norm || equipmentLabel(e).toLowerCase() === norm,
+    );
+    if (builtin) {
+      if (!settings.ownedEquipment.includes(builtin)) {
+        void update({ ownedEquipment: [...settings.ownedEquipment, builtin] });
+      }
+      setNewEquipment('');
+      return;
+    }
+    if (settings.ownedEquipment.some((e) => e.toLowerCase() === norm)) {
+      showToast(strings.settings.equipmentExists, { tone: 'warn' });
+      return;
+    }
+    void update({ ownedEquipment: [...settings.ownedEquipment, name] });
+    showToast(strings.settings.equipmentAdded(name), { tone: 'good' });
+    setNewEquipment('');
   };
 
   const onExport = async () => {
@@ -110,11 +141,51 @@ export function SettingsScreen() {
                     active={settings.ownedEquipment.includes(e)}
                     onClick={() => toggleEq(e)}
                   >
-                    {equipmentLabel[e]}
+                    {equipmentLabel(e)}
+                  </Chip>
+                ))}
+                {customEquipment.map((e) => (
+                  <Chip
+                    key={e}
+                    active
+                    onClick={() => toggleEq(e)}
+                    aria-label={strings.settings.removeEquipmentLabel(
+                      equipmentLabel(e),
+                    )}
+                    title={strings.settings.removeEquipmentLabel(
+                      equipmentLabel(e),
+                    )}
+                  >
+                    {equipmentLabel(e)}
+                    <span aria-hidden className="ml-1.5 text-white/80">
+                      ×
+                    </span>
                   </Chip>
                 ))}
               </div>
             </Field>
+            <div className="mt-3 flex gap-2">
+              <TextInput
+                value={newEquipment}
+                onChange={(e) => setNewEquipment(e.target.value)}
+                onKeyDown={(e) => {
+                  if (e.key === 'Enter') {
+                    e.preventDefault();
+                    addCustomEquipment();
+                  }
+                }}
+                placeholder={strings.settings.addEquipmentPlaceholder}
+                aria-label={strings.settings.addEquipmentPlaceholder}
+                className="flex-1"
+              />
+              <Button
+                variant="ghost"
+                onClick={addCustomEquipment}
+                disabled={!newEquipment.trim()}
+              >
+                {strings.settings.addEquipment}
+              </Button>
+            </div>
           </Card>
 
           <Card>

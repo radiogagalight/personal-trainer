@@ -591,7 +591,7 @@ export function LivePlayerScreen() {
                           {missing.length > 0 && (
                             <span className="mt-0.5 block pl-3 text-xs text-amber">
                               {strings.player.equipmentMissing(
-                                missing.map((m) => equipmentLabel[m]).join(', '),
+                                missing.map((m) => equipmentLabel(m)).join(', '),
                               )}
                             </span>
                           )}

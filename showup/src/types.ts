@@ -11,13 +11,22 @@ export type ExerciseType =
   | 'warmup'
   | 'cooldown';
 
-export type Equipment =
+/** The equipment types shipped with the app. */
+export type BuiltInEquipment =
   | 'none'
   | 'dumbbells'
   | 'kettlebells'
   | 'bands'
   | 'trx'
   | 'mat';
+
+/**
+ * Equipment a user can own. Built-in kinds get curated labels; users may also
+ * add their own custom equipment from Settings, stored as free-form strings.
+ * The `string & {}` keeps editor autocomplete for the built-in literals while
+ * still accepting any string.
+ */
+export type Equipment = BuiltInEquipment | (string & {});
 
 export type BodyArea =
   | 'upper-push'

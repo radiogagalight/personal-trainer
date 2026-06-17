@@ -60,7 +60,7 @@ export function SwapSheet({ open, onClose, current, onPick }: SwapSheetProps) {
                           {typeLabel[e.type]}
                         </StaticChip>
                         {e.equipment.slice(0, 2).map((eq) => (
-                          <StaticChip key={eq}>{equipmentLabel[eq]}</StaticChip>
+                          <StaticChip key={eq}>{equipmentLabel(eq)}</StaticChip>
                         ))}
                       </div>
                     </div>

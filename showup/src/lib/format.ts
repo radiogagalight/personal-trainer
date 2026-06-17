@@ -1,4 +1,10 @@
-import type { Equipment, ExerciseType, BodyArea, Metric } from '@/types';
+import type {
+  BuiltInEquipment,
+  Equipment,
+  ExerciseType,
+  BodyArea,
+  Metric,
+} from '@/types';
 
 export const typeLabel: Record<ExerciseType, string> = {
   strength: 'Strength',
@@ -19,7 +25,7 @@ export const areaLabel: Record<BodyArea, string> = {
   mobility: 'Mobility',
 };
 
-export const equipmentLabel: Record<Equipment, string> = {
+const builtInEquipmentLabel: Record<BuiltInEquipment, string> = {
   none: 'Bodyweight',
   dumbbells: 'Dumbbells',
   kettlebells: 'Kettlebells',
@@ -27,6 +33,19 @@ export const equipmentLabel: Record<Equipment, string> = {
   trx: 'TRX',
   mat: 'Mat',
 };
+
+/**
+ * Display label for any equipment. Built-in kinds get their curated label;
+ * custom equipment (added by the user in Settings) is shown verbatim.
+ */
+export function equipmentLabel(e: Equipment): string {
+  return builtInEquipmentLabel[e as BuiltInEquipment] ?? e;
+}
+
+/** True if `e` is one of the app's built-in equipment kinds. */
+export function isBuiltInEquipment(e: Equipment): e is BuiltInEquipment {
+  return e in builtInEquipmentLabel;
+}
 
 export const metricLabel: Record<Metric, string> = {
   reps: 'Reps',
@@ -56,7 +75,7 @@ export const ALL_AREAS: BodyArea[] = [
   'mobility',
 ];
 
-export const ALL_EQUIPMENT: Equipment[] = [
+export const ALL_EQUIPMENT: BuiltInEquipment[] = [
   'none',
   'dumbbells',
   'kettlebells',

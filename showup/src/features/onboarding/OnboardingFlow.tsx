@@ -120,7 +120,7 @@ export function OnboardingFlow() {
                   active={equipment.includes(e)}
                   onClick={() => toggleEquipment(e)}
                 >
-                  {equipmentLabel[e]}
+                  {equipmentLabel(e)}
                 </Chip>
               ))}
             </div>
